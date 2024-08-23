@@ -4,7 +4,6 @@
   <div>{{ y }}</div>
 </template>
 <script setup>
-import { ref } from "vue";
 import { useMouse } from "@vueuse/core";
 const { x, y } = useMouse();
 </script>
@@ -17,7 +16,6 @@ const { x, y } = useMouse();
   height: 50px;
   border-style: solid;
   border-radius: 10px;
-  /* background-color: white; */
   pointer-events: none;
 }
 </style>

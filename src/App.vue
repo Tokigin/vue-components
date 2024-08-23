@@ -5,6 +5,7 @@ import Accordions from "./components/ui/Accordions.vue";
 import Count from "./components/ui/Count.vue";
 import Range from "./components/ui/Range.vue";
 import Cursor from "./components/ui/Cursor.vue";
+import Alert from "./components/ui/Alert.vue";
 const data = ref(null);
 const dataC = (d) => {
   switch (d) {
@@ -23,10 +24,11 @@ const dataC = (d) => {
     case "5":
       data.value = h(Cursor);
       break;
+    case "6":
+      data.value = h(Alert);
+      break;
   }
 };
-
-const active = ref(false);
 </script>
 
 <template>
@@ -37,6 +39,7 @@ const active = ref(false);
       <button @click="dataC('3')">Count</button>
       <button @click="dataC('4')">Range</button>
       <button @click="dataC('5')">Cursor</button>
+      <button @click="dataC('6')">Alert</button>
     </div>
 
     <component :is="data" />
