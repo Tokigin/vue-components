@@ -1,7 +1,5 @@
 <template>
   <div class="cursor" :style="{ left: `${x}px`, top: `${y}px` }"></div>
-  <div>{{ x }}</div>
-  <div>{{ y }}</div>
 </template>
 <script setup>
 import { useMouse } from "@vueuse/core";

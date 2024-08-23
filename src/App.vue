@@ -6,6 +6,7 @@ import Count from "./components/ui/Count.vue";
 import Range from "./components/ui/Range.vue";
 import Cursor from "./components/ui/Cursor.vue";
 import Alert from "./components/ui/Alert.vue";
+import Card from "./components/ui/Card.vue";
 const data = ref(null);
 const dataC = (d) => {
   switch (d) {
@@ -27,6 +28,9 @@ const dataC = (d) => {
     case "6":
       data.value = h(Alert);
       break;
+    case "7":
+      data.value = h(Card);
+      break;
   }
 };
 </script>
@@ -40,6 +44,7 @@ const dataC = (d) => {
       <button @click="dataC('4')">Range</button>
       <button @click="dataC('5')">Cursor</button>
       <button @click="dataC('6')">Alert</button>
+      <button @click="dataC('7')">Card</button>
     </div>
 
     <component :is="data" />

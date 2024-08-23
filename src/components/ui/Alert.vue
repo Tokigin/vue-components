@@ -13,7 +13,7 @@ const open = ref(true);
 <style scoped>
 div {
   width: 60rem;
-  background-color: brown;
+  background-color: #242424;
   border: solid 0.1rem;
   border-radius: 1rem;
   display: flex;
