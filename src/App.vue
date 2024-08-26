@@ -7,6 +7,7 @@ import Range from "./components/ui/Range.vue";
 import Cursor from "./components/ui/Cursor.vue";
 import Alert from "./components/ui/Alert.vue";
 import Card from "./components/ui/Card.vue";
+import Fieldset from "./components/ui/Fieldset.vue";
 const data = ref(null);
 const dataC = (d) => {
   switch (d) {
@@ -31,6 +32,9 @@ const dataC = (d) => {
     case "7":
       data.value = h(Card);
       break;
+    case "8":
+      data.value = h(Fieldset);
+      break;
   }
 };
 </script>
@@ -45,6 +49,7 @@ const dataC = (d) => {
       <button @click="dataC('5')">Cursor</button>
       <button @click="dataC('6')">Alert</button>
       <button @click="dataC('7')">Card</button>
+      <button @click="dataC('8')">Fieldset</button>
     </div>
 
     <component :is="data" />
