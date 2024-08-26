@@ -18,8 +18,6 @@ const n2 = ref(30);
 </script>
 <style scoped>
 .wrapper {
-  /* height: 20rem; */
-  /* width: 3rem; */
   display: flex;
   gap: 1rem;
   align-items: center;
