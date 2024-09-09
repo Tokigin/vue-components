@@ -16,7 +16,7 @@ const { elementX, elementY, isOutside, elementHeight, elementWidth } =
   useMouseInElement(target);
 
 const Card = computed(() => {
-  const MAX_ROTATION = 6;
+  const MAX_ROTATION = 16;
   const rX = (
     MAX_ROTATION / 2 -
     (elementY.value / elementHeight.value) * MAX_ROTATION

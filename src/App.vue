@@ -8,6 +8,7 @@ import Cursor from "./components/ui/Cursor.vue";
 import Alert from "./components/ui/Alert.vue";
 import Card from "./components/ui/Card.vue";
 import Fieldset from "./components/ui/Fieldset.vue";
+import Drag from "./components/ui/Drag.vue";
 const data = ref(null);
 const dataC = (d) => {
   switch (d) {
@@ -35,6 +36,9 @@ const dataC = (d) => {
     case "8":
       data.value = h(Fieldset);
       break;
+    case "9":
+      data.value = h(Drag);
+      break;
   }
 };
 </script>
@@ -50,6 +54,7 @@ const dataC = (d) => {
       <button @click="dataC('6')">Alert</button>
       <button @click="dataC('7')">Card</button>
       <button @click="dataC('8')">Fieldset</button>
+      <button @click="dataC('9')">Drag</button>
     </div>
 
     <component :is="data" />
